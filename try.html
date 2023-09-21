@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elisabeth Kaufhold</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            height: 65px;
+            padding-top: 8px;
+        }
+
+        .menu2 {
+            display: grid;
+            grid-template-columns: 1fr 678px;
+        }
+
+        .title {
+            vertical-align: top;
+            height: 58px;
+        }
+
+        .titletext {
+            font-family: Arial;
+            display: inline-block;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: rgb(188, 217, 121);
+            font-size: 60px;
+            margin-bottom: 6px;
+        }
+
+        .buttons {
+            display: inline-block;
+            vertical-align: bottom;
+            margin-top: 3px;
+        }
+
+        .button {
+            font-family: Arial;
+            cursor: pointer;
+            transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
+            padding: 9px 16px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 25px;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            background-color: rgb(188, 217, 121);
+            color: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .button:active {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
+        }
+
+        .buttondeutsch {
+            color: white;
+            background-color: rgb(188, 217, 121);
+            border-color: rgb(188, 217, 121);
+        }
+
+        .buttondeutsch:hover {
+            background-color: rgb(186, 213, 122);
+        }
+
+        .buttondeutsch:active {
+            background-color: rgb(188, 217, 121);
+        }
+
+        .buttonfacebook {
+            margin-bottom: 4px;
+        }
+
+        .facebook {
+            font-family: sans-serif;
+            font-weight: bold;
+            background-color: rgb(24, 119, 242);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 25px;
+        }
+
+        .facebook:hover {
+            color: rgb(24, 119, 242);
+            background-color: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .facebook:active {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .insta2 {
+            font-family: sans-serif;
+            font-weight: bold;
+            background-color: rgb(221, 42, 123);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 25px;
+        }
+
+        .insta2:hover {
+            color: rgb(253, 29, 29);
+            background-color: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .insta2:active {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 5px solid rgb(188, 217, 121);
+            margin: 0;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial;
+            margin-top: 0;
+            margin-bottom: 11px;
+            color: rgb(188, 217, 121);
+            text-align: center;
+            font-size: 45px;
+        }
+
+        .primarypicture {
+            display: inline-block;
+            width: 1666px;
+        }
+
+        .contacttext {
+            font-family: Arial;
+            color: white;
+            padding: 4px;
+            background-color: rgb(119, 173, 120);
+            border-radius: 30px;
+            width: 1000px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .buttonmail {
+            font-family: Arial;
+            color: white;
+            padding: 4px;
+            background-color: rgb(119, 173, 120);
+            border-radius: 30px;
+            width: 1000px;
+            text-align: center;
+            margin: 0;
+            border: 3px solid white;
+            font-size: 25px;
+            margin-bottom: 10px;
+            transition: background-color 0.15s, color 0.15s;
+        }
+
+        .buttonmail:hover {
+            color: rgb(119, 173, 120);
+            background-color: white;
+            border: 3px solid rgb(119, 173, 120);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .buttonmail:active {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        .end {
+            background-color: rgb(188, 217, 121);
+            color: rgb(188, 217, 121);
+        }
+
+        .endtext {
+            margin: 0;
+            background-color: rgb(188, 217, 121);
+            font-family: Arial;
+            text-align: center;
+            font-size: medium;
+            padding: 50px;
+        }
+
+        /* Audio Styles */
+        .audio {
+            text-align: center;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: rgb(119, 173, 120);
+        }
+
+        audio::-webkit-media-controls-mute-button {
+            background-color: rgb(188, 217, 121);
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-mute-button:hover {
+            background-color: rgb(208, 232, 150);
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-timeline {
+            background-color: rgb(188, 217, 121);
+            border-radius: 25px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        audio::-webkit-media-controls-timeline:hover {
+            background-color: rgb(208, 232, 150);
+            border-radius: 25px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: rgb(188, 217, 121);
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background-color: rgb(188, 217, 121);
+            border-radius: 25px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        audio::-webkit-media-controls-volume-slider:hover {
+            background-color: rgb(208, 232, 150);
+            border-radius: 25px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        audio::-webkit-media-controls-play-button:hover {
+            background-color: rgb(208, 232, 150);
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="menu2">
+        <div class="title">
+            <h1 class="titletext">Elisabeth Kaufhold</h1>
+        </div>
+        <div class="buttons">
+            <button type="button" class="button" onclick="location.href='#resume'" alt="Button, which brings you to the resume">
+                Resume
+            </button>
+            <button class="button" onclick="location.href='#media'" alt="Button, which brings you to the media">
+                Media
+            </button>
+            <button class="button" onclick="location.href='#events'" alt="Button, which brings you to the events">
+                Events
+            </button>
+            <button class="button" onclick="location.href='#contact'" alt="Button, which brings you to the contact information">
+                Contact
+            </button>
+            <a href="Websiteschoolfinalgerman.html">
+                <button class="button buttondeutsch" alt="Button, which changes the language to Deutsch">
+                    Deutsch
+                </button>
+            </a>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="content">
+    <div class="picture">
+        <div> <p class="idk">i</p></div>
+        <div><img class="primarypicture" src="primarypicture.jpg" alt="Title picture of the website"></div>
+        <div><p class="idk">i</p></div>
+    </div>
+    <div> <p class="idk">I <span id="resume">don't </span> know what I should write here...</p></div>
+    <hr>
+    <div class="resume">
+        <h2>
+            Resume
+        </h2>
+        <div class="resumecontent">
+            <p class="resumetext">
+                Elisabeth Kaufhold first studied recorder with Birgit Beyer, Prof. Peter Thalheimer, and Prof. Jeremias Schwarzer at the Musikhochschule in Nuremberg from 1998 to 2002.
+                There she also began studying the baroque bassoon with Ursula Bruckdorfer, which she deepened in postgraduate studies at the Schola Cantorum in Basel with Donna Agrell and in Frankfurt with Christian Beuse.
+                At the same time, she began postgraduate studies in recorder at the Musikhochschule in Zurich with Matthias Weilenmann.
+                Already during her studies, she performed in renowned baroque orchestras such as the Akademie für Alte Musik Berlin, the Collegium 1704 Prague under Vaclav Luks, or the <span id="media">Capella</span> Augustina under Andreas Spering.
+                She can be heard in numerous radio and CD recordings.
+                Since 2007, the freelance artist lives and works in Berlin.
+            </p>
+        </div>
+    </div>
+
+    <div class="media">
+        <hr>
+        <div class="mediatext">
+            <h2 id="media">
+                Media
+            </h2>
+        </div>
+        <div class="mediacontent">
+            <!-- Your media content here -->
+        </div>
+        <div class="audiospace">
+            <div class="audio"><audio controls src="WhatsApp Audio 2023-09-20 at 00.47.13.dat.unknown.mp4"></audio></div>
+        </div>
+    </div>
+    <hr>
+    <div class="events">
+        <h2 id="events">
+            Events
+        </h2>
+        <div class="eventscontent">
+            <!-- Your events content here -->
+        </div>
+    </div>
+    <hr>
+    <div class="contact">
+        <h2 class="contacttitle" id="contact">
+            Contact
+        </h2>
+        <div class="contactcontent">
+            <div class="email">
+                <div class="idk">i</div>
+                <div> <a href="mailto:elisabethkaufhold3@gmail.com"><button class="buttonmail"
+                                                                           alt="Opens Mail, with Elisabeth Kaufhold's E-Mail already put in">E-Mail: elisabethkaufhold3@gmail.com
+                    </button></a></div>
+                <div class="idk">i</div>
+            </div>
+            <div class="phone">
+                <div class="idk">i</div>
+                <div>
+                    <p class="contacttext">Phone: +49 173 5955 918</p>
+                </div>
+                <div class="idk">i</div>
+            </div>
+            <div class="buttonsbottom">
+                <div class="idk">i</div>
+                <div class="buttonfacebook">
+                    <a href="https://www.facebook.com/elisabeth.kaufhold.1">
+                        <button class="facebook" alt="Button, which brings you to Elisabeth Kaufhold's Facebook">
+                            Facebook
+                        </button>
+                    </a>
+                </div>
+                <div class="idk">i</div>
+                <div class="buttoninsta2">
+                    <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+                        <button class="insta2" alt="Button, which brings you to Elisabeth Kaufhold's Instagram">
+                            Instagram
+                        </button>
+                    </a>
+                </div>
+                <div class="idk">i</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <p class="endtext">Designed and Programmed by <br>Konstantin Schwarzer</p>
+    </div>
+
+</div>
+</body>
+</html>
